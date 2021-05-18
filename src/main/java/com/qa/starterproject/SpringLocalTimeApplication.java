@@ -11,11 +11,11 @@ import org.springframework.context.annotation.Bean;
 public class SpringLocalTimeApplication {
 	
 	public static void main(String[] args) {
-        ApplicationContext context = SpringApplication.run(SpringExampleApplication.class, args);
+        ApplicationContext context = SpringApplication.run(SpringLocalTimeApplication.class, args);
         
         Object byName = context.getBean("localTime");
         LocalTime byType = context.getBean(LocalTime.class);
-        LocalTime byBoth = context.getBean("localTime", LocalTime.class);
+        LocalTime byBoth = context.getBean("greeting", LocalTime.class);
 
         System.out.println(byName);
         System.out.println(byType);
